@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Skydio Cloud API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vehicles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List vehicles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.skydio.com/api/v0/vehicles"
+          },
+          "docs": "List vehicles in the organization."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Flights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List flights",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.skydio.com/api/v0/flights",
+            "params": [
+              {
+                "name": "vehicle_serial",
+                "value": "",
+                "type": "query",
+                "description": "Filter flights by vehicle serial number."
+              }
+            ]
+          },
+          "docs": "Retrieve flights, optionally filtered by vehicle."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Markers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create or update a marker",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.skydio.com/api/v0/marker",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or update a marker (incident)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
