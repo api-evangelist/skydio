@@ -55,9 +55,9 @@ apis:
         url: https://support.skydio.com/hc/en-us/articles/4402958154651-How-to-Generate-an-API-Token-for-a-Skydio-Cloud-Integration
       - type: GettingStarted
         url: https://apidocs.skydio.com/docs
-      - type: Changelog
+      - type: ChangeLog
         url: https://apidocs.skydio.com/changelog
-      - type: LLMsTxt
+      - type: LlmsText
         url: https://apidocs.skydio.com/llms.txt
   - aid: skydio:skydio-control-telemetry-icd
     name: Skydio Control & Telemetry ICD
@@ -121,7 +121,7 @@ common:
     url: https://apidocs.skydio.com/docs
   - type: APIReference
     url: https://apidocs.skydio.com/reference/introduction
-  - type: Changelog
+  - type: ChangeLog
     url: https://apidocs.skydio.com/changelog
   - type: Support
     url: https://support.skydio.com/
