@@ -109,6 +109,10 @@ apis:
       - type: Support
         url: https://support.skydio.com/
 common:
+  - type: DomainSecurity
+    url: security/skydio-domain-security.yml
+  - type: Authentication
+    url: authentication/skydio-authentication.yml
   - type: Website
     url: https://www.skydio.com/
   - type: Portal

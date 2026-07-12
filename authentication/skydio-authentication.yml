@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/skydio-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiTokenAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Skydio Cloud API token. Generate in Skydio Cloud under Settings > API Tokens.
+    Treat the token secret like a password.
+  sources:
+  - openapi/skydio-openapi.yml
