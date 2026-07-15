@@ -109,6 +109,8 @@ apis:
       - type: Support
         url: https://support.skydio.com/
 common:
+  - type: AgenticAccess
+    url: agentic-access/skydio-agentic-access.yml
   - type: DomainSecurity
     url: security/skydio-domain-security.yml
   - type: Authentication
