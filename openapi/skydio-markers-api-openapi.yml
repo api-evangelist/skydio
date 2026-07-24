@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: Skydio Cloud Flights Markers API
+  description: The Skydio Cloud API is an HTTP-based REST API with JSON request and response bodies that lets developers manage Skydio drone fleets programmatically. Endpoints cover vehicles, flights, and markers (incidents), among other resources. Authentication uses API tokens generated in Skydio Cloud (Settings > API Tokens > Generate Token) and sent in the credentials header of every request.
+  version: '0'
+  contact:
+    name: Skydio Cloud API
+    url: https://apidocs.skydio.com/
+servers:
+- url: https://api.skydio.com/api/v0
+  description: Skydio Cloud API v0
+security:
+- ApiTokenAuth: []
+tags:
+- name: Markers
+  description: Create or update markers (incidents).
+paths:
+  /marker:
+    post:
+      summary: Create or update a marker
+      description: Create or update a marker (incident).
+      operationId: upsertMarker
+      tags:
+      - Markers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Marker created or updated.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    ApiTokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Skydio Cloud API token. Generate in Skydio Cloud under Settings > API Tokens. Treat the token secret like a password.
