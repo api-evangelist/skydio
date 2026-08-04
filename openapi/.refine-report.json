@@ -1,0 +1,18 @@
+{
+  "provider": "skydio",
+  "sources": [
+    "skydio-flights-api-openapi.yml",
+    "skydio-markers-api-openapi.yml",
+    "skydio-vehicles-api-openapi.yml"
+  ],
+  "outputs": [
+    "skydio-flights-api-openapi.yml",
+    "skydio-markers-api-openapi.yml",
+    "skydio-vehicles-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

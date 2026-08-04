@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Skydio Cloud API
+  description: >-
+    The Skydio Cloud API is an HTTP-based REST API with JSON request and
+    response bodies that lets developers manage Skydio drone fleets
+    programmatically. Endpoints cover vehicles, flights, and markers
+    (incidents), among other resources. Authentication uses API tokens
+    generated in Skydio Cloud (Settings > API Tokens > Generate Token) and
+    sent in the credentials header of every request.
+  version: "0"
+  contact:
+    name: Skydio Cloud API
+    url: https://apidocs.skydio.com/
+servers:
+  - url: https://api.skydio.com/api/v0
+    description: Skydio Cloud API v0
+security:
+  - ApiTokenAuth: []
+paths:
+  /vehicles:
+    get:
+      summary: List vehicles
+      description: List vehicles in the organization.
+      operationId: listVehicles
+      tags:
+        - Vehicles
+      responses:
+        '200':
+          description: A list of vehicles.
+          content:
+            application/json:
+              schema:
+                type: object
+  /flights:
+    get:
+      summary: List flights
+      description: Retrieve flights, optionally filtered by vehicle.
+      operationId: listFlights
+      tags:
+        - Flights
+      parameters:
+        - in: query
+          name: vehicle_serial
+          schema:
+            type: string
+          description: Filter flights by vehicle serial number.
+      responses:
+        '200':
+          description: A list of flights.
+          content:
+            application/json:
+              schema:
+                type: object
+  /marker:
+    post:
+      summary: Create or update a marker
+      description: Create or update a marker (incident).
+      operationId: upsertMarker
+      tags:
+        - Markers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Marker created or updated.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    ApiTokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: >-
+        Skydio Cloud API token. Generate in Skydio Cloud under
+        Settings > API Tokens. Treat the token secret like a password.
+tags:
+  - name: Vehicles
+    description: Manage vehicles in your Skydio Cloud organization.
+  - name: Flights
+    description: Retrieve flights and flight metadata.
+  - name: Markers
+    description: Create or update markers (incidents).
