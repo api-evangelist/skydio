@@ -1,0 +1,127 @@
+{
+  "item": [
+    {
+      "id": "eddd5a99-d053-4fe8-ab90-765238cb45b5",
+      "name": "Vehicles",
+      "description": {
+        "content": "Manage vehicles in your Skydio Cloud organization.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d9468ea-1f45-40e3-b741-1acf9973849a",
+          "name": "List vehicles",
+          "request": {
+            "name": "List vehicles",
+            "description": {
+              "content": "List vehicles in the organization.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "vehicles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a63c92e-1ed0-46a9-8e28-3eac32ff91f9",
+              "name": "A list of vehicles.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "vehicles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.skydio.com/api/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c4a7ad52-11cc-45bc-a57c-d5524d9f3307",
+    "name": "Skydio Cloud Flights Vehicles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Skydio Cloud API is an HTTP-based REST API with JSON request and response bodies that lets developers manage Skydio drone fleets programmatically. Endpoints cover vehicles, flights, and markers (incidents), among other resources. Authentication uses API tokens generated in Skydio Cloud (Settings > API Tokens > Generate Token) and sent in the credentials header of every request.\n\nContact Support:\n Name: Skydio Cloud API",
+      "type": "text/plain"
+    }
+  }
+}

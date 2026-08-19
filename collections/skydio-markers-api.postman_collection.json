@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "69504ca2-6945-40eb-88b5-cbbd574c6ef3",
+      "name": "Markers",
+      "description": {
+        "content": "Create or update markers (incidents).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c9c64259-9890-488a-b136-c83697d62453",
+          "name": "Create or update a marker",
+          "request": {
+            "name": "Create or update a marker",
+            "description": {
+              "content": "Create or update a marker (incident).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "marker"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9155e6d3-503d-4b16-9c61-0789541cdc2f",
+              "name": "Marker created or updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "marker"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.skydio.com/api/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "99e872e7-7f51-4124-822f-851a7a80298e",
+    "name": "Skydio Cloud Flights Markers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Skydio Cloud API is an HTTP-based REST API with JSON request and response bodies that lets developers manage Skydio drone fleets programmatically. Endpoints cover vehicles, flights, and markers (incidents), among other resources. Authentication uses API tokens generated in Skydio Cloud (Settings > API Tokens > Generate Token) and sent in the credentials header of every request.\n\nContact Support:\n Name: Skydio Cloud API",
+      "type": "text/plain"
+    }
+  }
+}

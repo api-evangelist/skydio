@@ -1,0 +1,110 @@
+# Skydio Cloud API Documentation
+
+> Documentation for Skydio Cloud API
+
+## Guides
+- [Exploring Skydio Cloud's REST API](https://apidocs.skydio.com/docs/exploring-the-skydio-cloud-api.md)
+- [Exploring Skydio Cloud's Webhook API](https://apidocs.skydio.com/docs/exploring-skydios-webhook-api.md)
+- [Building End-to-End Workflows With Skydio Cloud APIs](https://apidocs.skydio.com/docs/skydios-apis-in-action.md)
+- [Skydio Flight Simulator in Remote Flight Deck (Beta)](https://apidocs.skydio.com/docs/skydio-flight-simulator-in-remote-flight-deck-beta.md): Operator Guide for Administrators and Remote Pilots
+
+## API Reference
+- [Introduction](https://apidocs.skydio.com/reference/introduction.md)
+- [Authentication](https://apidocs.skydio.com/reference/authentication.md)
+- [Webhook Request Format](https://apidocs.skydio.com/reference/webhook_request_format.md)
+- [Alerts](https://apidocs.skydio.com/reference/alerts.md)
+- [Get Alert History](https://apidocs.skydio.com/reference/alerts_get_v0_alerts_history.md): Search mission alerts by various parameters.
+- [Create Alert](https://apidocs.skydio.com/reference/alerts_post_v0_alert.md): Create a new alert.
+- [Get Alert](https://apidocs.skydio.com/reference/alerts_get_v0_alert_alert_id.md): Fetch metadata about a single alert by id.
+- [Update Alert](https://apidocs.skydio.com/reference/alerts_patch_v0_alert_alert_id.md): Update an existing alert by id.
+- [Delete Alert](https://apidocs.skydio.com/reference/alerts_delete_v0_alert_alert_id_delete.md): Delete an existing alert by id.
+- [Get Alerts](https://apidocs.skydio.com/reference/alerts_get_v0_alerts.md): Search alert by various parameters.
+- [Attachments](https://apidocs.skydio.com/reference/attachments.md)
+- [Get Attachment by Serial](https://apidocs.skydio.com/reference/attachments_get_v0_attachment_attachment_serial.md): Fetch metadata about a single attachment by its serial.
+- [Get Attachments](https://apidocs.skydio.com/reference/attachments_get_v0_attachments.md): Search attachments by various parameters.
+- [Batteries](https://apidocs.skydio.com/reference/batteries.md)
+- [Get Batteries](https://apidocs.skydio.com/reference/batteries_get_v0_batteries.md): Search batteries by various parameters.
+- [Get Battery by Serial](https://apidocs.skydio.com/reference/batteries_get_v0_battery_battery_serial.md): Fetch metadata about a single battery by its serial.
+- [Get Controller by Serial](https://apidocs.skydio.com/reference/controllers_get_v0_controller_controller_serial.md): Fetch metadata about a single controller by its serial.
+- [Get Controllers](https://apidocs.skydio.com/reference/controllers_get_v0_controllers.md): Search controllers by various parameters.
+- [Create Distribution List](https://apidocs.skydio.com/reference/distribution-lists_post_v0_distribution_list.md): Create a new distribution list.
+- [Get Distribution List](https://apidocs.skydio.com/reference/distribution-lists_get_v0_distribution_list_distribution_list_id.md): Fetch a single distribution list by uuid, including its recipients.
+- [Update Distribution List](https://apidocs.skydio.com/reference/distribution-lists_patch_v0_distribution_list_distribution_list_id.md): Update an existing distribution list by uuid.
+- [Delete Distribution List](https://apidocs.skydio.com/reference/distribution-lists_delete_v0_distribution_list_distribution_list_id_delete.md): Delete an existing distribution list by uuid.
+- [Get Distribution Lists](https://apidocs.skydio.com/reference/distribution-lists_get_v0_distribution_lists.md): Search distribution lists using search_term to filter by name.
+- [Docks](https://apidocs.skydio.com/reference/docks.md)
+- [Get Dock by Serial](https://apidocs.skydio.com/reference/docks_get_v0_dock_dock_serial.md): Fetch metadata about a single dock by its serial.
+- [Get Docks](https://apidocs.skydio.com/reference/docks_get_v0_docks.md): Search docks by various parameters.
+- [Create External Contact](https://apidocs.skydio.com/reference/external-contacts_post_v0_external_contact.md): Create a new external contact.
+- [Get External Contact](https://apidocs.skydio.com/reference/external-contacts_get_v0_external_contact_external_contact_id.md): Fetch a single external contact by uuid.
+- [Update External Contact](https://apidocs.skydio.com/reference/external-contacts_patch_v0_external_contact_external_contact_id.md): Update an existing external contact by uuid.
+- [Delete External Contact](https://apidocs.skydio.com/reference/external-contacts_delete_v0_external_contact_external_contact_id_delete.md): Delete an existing external contact by uuid.
+- [Get External Contacts](https://apidocs.skydio.com/reference/external-contacts_get_v0_external_contacts.md): Search external contacts using search_term to filter by email, name, or phone number.
+- [Flights](https://apidocs.skydio.com/reference/flights.md)
+- [Get Flight by ID](https://apidocs.skydio.com/reference/flights_get_v0_flight_flight_id.md): Fetch metadata about a single flight by its flight id.
+- [Get Flights](https://apidocs.skydio.com/reference/flights_get_v0_flights.md): Search flights by various parameters.
+- [Telemetry](https://apidocs.skydio.com/reference/telemetry.md)
+- [Get Telemetry for Flight V0](https://apidocs.skydio.com/reference/telemetry_get_v0_flight_flight_id_telemetry.md): Fetch telemetry from a single flight by its flight id.
+- [Get Telemetry for Flight](https://apidocs.skydio.com/reference/telemetry_get_v1_flight_flight_id_telemetry.md): Fetch telemetry from a single flight by its flight id.
+- [JWT Validation](https://apidocs.skydio.com/reference/jwt-validation.md)
+- [Get JSON Web Key (JWK) for JWT Validation](https://apidocs.skydio.com/reference/jwt-validation_get_v0_jwt_validation.md): Fetch JSON Web Key for a Skydio-issued JWT. See [Webhook Validation](ref:webhook_validation) for JWT validation corresponding to webhook requests.
+- [Markers](https://apidocs.skydio.com/reference/markers.md)
+- [Upsert Marker (Beta)](https://apidocs.skydio.com/reference/markers_post_v0_marker.md): Create or update a marker. This will show up as an incident in the map view of Remote Flight Deck for DFR Command customers.
+- [Get Marker by UUID (Beta)](https://apidocs.skydio.com/reference/markers_get_v0_marker_uuid.md): Fetch metadata about a marker by its UUID.
+- [Delete Marker (Beta)](https://apidocs.skydio.com/reference/markers_delete_v0_marker_uuid_delete.md): Delete a marker. This will remove the incident from the map view of Remote Flight Deck for DFR Command customers.
+- [Get Markers (Beta)](https://apidocs.skydio.com/reference/markers_get_v0_markers.md): Search markers by various parameters.
+- [Media](https://apidocs.skydio.com/reference/media.md)
+- [Download Media by ID](https://apidocs.skydio.com/reference/media_get_v0_media_download_uuid.md): Download a media file by its uuid.
+- [Download Media Thumbnail by ID](https://apidocs.skydio.com/reference/media_get_v0_media_download_uuid_thumbnail.md): Download a thumbnail for a media file by its uuid.
+- [Get Media by ID](https://apidocs.skydio.com/reference/media_get_v0_media_uuid.md): Fetch metadata about a single media file by its uuid.
+- [Delete Media by ID](https://apidocs.skydio.com/reference/media_delete_v0_media_uuid_delete.md): Delete a media file by its uuid. Cannot be undone!
+- [Get Media Files](https://apidocs.skydio.com/reference/media_get_v0_media_files.md): Search media files by various parameters.
+- [Missions](https://apidocs.skydio.com/reference/missions.md)
+- [Create Scheduled Mission](https://apidocs.skydio.com/reference/missions_post_v0_mission_schedule.md): Create a new schedule for a specific mission template.
+- [Update Scheduled Mission](https://apidocs.skydio.com/reference/missions_patch_v0_mission_schedule_uuid.md): Update an existing schedule for a mission template.
+- [Delete Scheduled Mission](https://apidocs.skydio.com/reference/missions_delete_v0_mission_schedule_uuid_delete.md): Delete an existing schedule for a mission template.
+- [Schedule Mission Now](https://apidocs.skydio.com/reference/missions_post_v0_mission_schedule_now.md): Schedule a mission by mission template ID to run now on an Online vehicle. Confirm mission status on vehicle via /vehicle/{vehicle_serial} endpoint.
+- [Get Scheduled Missions](https://apidocs.skydio.com/reference/missions_get_v0_mission_schedules.md): Search scheduled missions by various parameters.
+- [Create Mission Template](https://apidocs.skydio.com/reference/missions_post_v0_mission_template.md): Create a new mission template.
+- [Get Mission Template by ID](https://apidocs.skydio.com/reference/missions_get_v0_mission_template_uuid.md): Get an existing Mission Template by its uuid.
+- [Update Mission Template](https://apidocs.skydio.com/reference/missions_patch_v0_mission_template_uuid.md): Update an existing mission template by its uuid.
+- [Delete Mission Template](https://apidocs.skydio.com/reference/missions_delete_v0_mission_template_uuid_delete.md): Delete an existing Mission Template by its uuid.
+- [Get Mission Templates](https://apidocs.skydio.com/reference/missions_get_v0_mission_templates.md): Get mission templates in your organization.
+- [Mission Results](https://apidocs.skydio.com/reference/mission-results.md)
+- [Get Mission Runs](https://apidocs.skydio.com/reference/mission-results_get_v0_mission_runs.md): Search mission runs (single executions of a mission) by various parameters.
+- [Error Codes](https://apidocs.skydio.com/reference/error-codes.md)
+- [Get Skydio Cloud API OpenAPI Spec](https://apidocs.skydio.com/reference/openapi-spec_get_v0_openapi_spec.md): Get the OpenAPI spec for the Skydio Cloud API.
+- [Scans](https://apidocs.skydio.com/reference/scans.md)
+- [Get Scan by ID](https://apidocs.skydio.com/reference/scans_get_v0_scan_uuid.md): Fetch metadata about a single scan by its uuid.
+- [Get Scans](https://apidocs.skydio.com/reference/scans_get_v0_scans.md): Search scans by various parameters.
+- [Sensor Package](https://apidocs.skydio.com/reference/sensor-packages_get_v0_sensor_package_sensor_package_serial.md): Get a specific sensor package by serial number
+- [Sensor Packages](https://apidocs.skydio.com/reference/sensor-packages_get_v0_sensor_packages.md): Get a list of sensor packages
+- [Users](https://apidocs.skydio.com/reference/users.md)
+- [Get User by ID](https://apidocs.skydio.com/reference/users_get_v0_user_uuid.md): Fetch metadata about a single user by its uuid.
+- [Get Users](https://apidocs.skydio.com/reference/users_get_v0_users.md): Search users by various parameters.
+- [Vehicles](https://apidocs.skydio.com/reference/vehicles.md)
+- [Get Vehicle by Serial](https://apidocs.skydio.com/reference/vehicles_get_v0_vehicle_vehicle_serial.md): Fetch metadata about a single vehicle by its serial.
+- [Get Vehicles](https://apidocs.skydio.com/reference/vehicles_get_v0_vehicles.md): Search vehicles by various parameters.
+- [Create Webhook](https://apidocs.skydio.com/reference/webhooks_post_v0_webhook.md): Create a new webhook.
+- [Get Webhook](https://apidocs.skydio.com/reference/webhooks_get_v0_webhook_webhook_id.md): Fetch metadata about a single webhook by id.
+- [Update Webhook](https://apidocs.skydio.com/reference/webhooks_patch_v0_webhook_webhook_id.md): Update an existing webhook by id.
+- [Delete Webhook](https://apidocs.skydio.com/reference/webhooks_delete_v0_webhook_webhook_id_delete.md): Delete an existing webhook by id.
+- [Get Webhooks](https://apidocs.skydio.com/reference/webhooks_get_v0_webhooks.md): Fetch a list of webhooks.
+- [WhoAmI](https://apidocs.skydio.com/reference/whoami.md)
+- [WhoAmI](https://apidocs.skydio.com/reference/whoami_get_v0_whoami.md): Fetch metadata about your api token.
+- [Webhook Validation](https://apidocs.skydio.com/reference/webhook-validation.md)
+- [Get JSON Web Key (JWK) for Webhook Validation](https://apidocs.skydio.com/reference/webhook-validation_get_webhook_validation.md): Fetch JSON Web Key for JWT corresponding to a webhook request
+- [RTSP Streaming](https://apidocs.skydio.com/reference/rtsp-streaming.md)
+- [Live Telemetry](https://apidocs.skydio.com/reference/live-telemetry.md)
+
+## Changelog
+- [Updated Live Telemetry API: Marker Info](https://apidocs.skydio.com/changelog/updated-live-telemetry-api-marker-info.md)
+- [New Marker Type Available](https://apidocs.skydio.com/changelog/new-marker-type-available.md)
+- [New OpenAPI API: GET /openapi_spec](https://apidocs.skydio.com/changelog/new-openapi-api-get-openapi_spec.md)
+- [New Attachments APIs: GET /attachments and GET /attachment/{attachment_serial}](https://apidocs.skydio.com/changelog/new-attachments-apis-get-attachments-and-get-attachmentattachment_serial.md)
+- [New WhoAmI API: GET /whoami](https://apidocs.skydio.com/changelog/new-whoami-api-get-whoami.md)
+- [New API Guides Available](https://apidocs.skydio.com/changelog/new-api-guides-available.md)
+- [Markers API: New GET and DELETE Endpoints](https://apidocs.skydio.com/changelog/markers-api-new-get-and-delete-endpoints.md)
+- [Telemetry API: New V1 Endpoint](https://apidocs.skydio.com/changelog/new-v1-telemetry-endpoint-get-v1flightflight_idtelemetry.md)
+- [Docks API: GET /docks and /dock Includes Dock for X10 and Exposes Dock Location When Available](https://apidocs.skydio.com/changelog/get-docks-and-dock-now-includes-dock-for-x10-and-exposes-dock-location-where-available.md)
+- [New API: Marker for CAD Incidents](https://apidocs.skydio.com/changelog/new-api-marker-for-cad-incidents.md)

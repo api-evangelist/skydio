@@ -1,0 +1,139 @@
+{
+  "item": [
+    {
+      "id": "a7684349-11b2-4289-99a7-cc4cf0fcc5f8",
+      "name": "Flights",
+      "description": {
+        "content": "Retrieve flights and flight metadata.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3bbec2e2-8501-4de8-8f4f-986cfc0b0334",
+          "name": "List flights",
+          "request": {
+            "name": "List flights",
+            "description": {
+              "content": "Retrieve flights, optionally filtered by vehicle.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "flights"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "vehicle_serial",
+                  "value": "<string>",
+                  "description": "Filter flights by vehicle serial number."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e99c8c5b-abe8-4ede-8f6c-892f309360cc",
+              "name": "A list of flights.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "flights"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "vehicle_serial",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.skydio.com/api/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1b62b4aa-d3fb-457a-9a02-1809366dc228",
+    "name": "Skydio Cloud Flights API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Skydio Cloud API is an HTTP-based REST API with JSON request and response bodies that lets developers manage Skydio drone fleets programmatically. Endpoints cover vehicles, flights, and markers (incidents), among other resources. Authentication uses API tokens generated in Skydio Cloud (Settings > API Tokens > Generate Token) and sent in the credentials header of every request.\n\nContact Support:\n Name: Skydio Cloud API",
+      "type": "text/plain"
+    }
+  }
+}
