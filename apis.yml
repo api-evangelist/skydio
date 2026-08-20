@@ -55,6 +55,13 @@ apis:
   - Live Telemetry
   - Missions
   - REST API
+  - Webhook
+  tags_raw:
+  - Drones
+  - Fleet Management
+  - Live Telemetry
+  - Missions
+  - REST API
   - Webhooks
   properties:
   - type: Documentation
