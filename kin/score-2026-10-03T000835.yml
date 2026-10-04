@@ -1,22 +1,20 @@
-# Kin Score artifact — skydio — 2026-08-27T140727
+# Kin Score artifact — skydio — 2026-10-03T000835
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: skydio
-  schema_version: 0.15.1
-  scored_at: '2026-08-27'
-  run_ts: 2026-08-27T140727
-  composite: 42.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T000835
+  composite: 40.4
   band: developing
   facets:
-    discoverability: 72.2
-    contract_quality: 54.4
-    governance: 0.0
-    operational_transparency: 44.7
-    developer_ergonomics: 42.9
-    commercial_clarity: 35.5
+    discoverability: 64.3
+    contract_quality: 49.0
     contract_governance: 0.0
-    access_clarity: 35.5
+    operational_transparency: 42.6
+    developer_ergonomics: 42.9
+    access_clarity: 33.4
   agent_readiness:
     score: 19.8
     band: agent-aware
@@ -40,6 +38,12 @@ kin_score:
       protected_resource_metadata: false
       dynamic_client_registration: false
       agentic_commerce: false
+  regulatory:
+    applies: true
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+    matched_via: fallback
   provenance:
     agentic_access: derived
     contracts:
