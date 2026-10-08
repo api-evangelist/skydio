@@ -164,6 +164,12 @@ apis:
   - type: OpenAPI
     url: openapi/skydio-vehicles-api-openapi.yml
 common:
+  - type: Plans
+    url: plans/skydio-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/skydio-rate-limits.yml
+  - type: FinOps
+    url: finops/skydio-finops.yml
   - type: AgenticAccess
     url: agentic-access/skydio-agentic-access.yml
   - type: DomainSecurity
