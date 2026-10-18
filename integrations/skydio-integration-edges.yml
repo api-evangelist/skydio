@@ -1,0 +1,61 @@
+edges:
+- partner_name: FAA UAS Declaration of Compliance
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://uasdoc.faa.gov/listDocs/RID000000300
+  category: FAA-accepted UAS declaration of compliance
+  contract_reference:
+    register: FAA UAS Declaration of Compliance (uasdoc.faa.gov public DOC list)
+    standard: FAA UAS Declaration of Compliance (Remote ID / OOP)
+    spec_file: null
+    role: doc-manufacturer
+    registered_name: Skydio
+    register_id: RID000000300
+    matched_domain: skydio.com
+    matched_by: domain
+    identity: wikidata Q97321374 'Skydio' P856 https://www.skydio.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    statuses:
+    - accepted
+    models:
+    - 2 SDRC2V1
+    - 2+ SDR35V1
+    - 2+ SDR35V2
+    - R10 SDR5PC
+    - X10 with Skydio Parachute for X10 (SR47APCH)
+    - X10E SR47P
+    - X2E SDR21V1
+    - X2E SDR21V2
+    certified_products:
+    - product: 'Operations Over People: Category 2'
+      lapsed: false
+      latest_update: '2026-06-22'
+    - product: 'Operations Over People: Category 3'
+      lapsed: false
+      latest_update: '2026-06-22'
+    - product: 'Remote ID: standard RID aircraft'
+      lapsed: false
+      latest_update: '2026-09-21'
+    signal_note: 'certified_products = one entry per PRODUCT TYPE (Remote ID aircraft / broadcast module / OOP category),
+      lapsed when every DOC of that type is rescinded; model and DOC counts are context, never counted. FAA-accepted
+      declarations (not self-filed): no address published, so the HQ check of self-filed registers does not apply'
+    detected_by: sweep-drones-airspace.py
+    detected: '2026-10-18'
+  detected_by: sweep-drones-airspace.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.faa.gov/uas/getting_started/laanc
+- https://uasdoc.faa.gov/api/v1/publicDOCRev?pageIndex=0&itemsPerPage=2000
+- https://interussplatform.org/members/
+- https://gutma.org/full-members/
+checked:
+- https://gutma.org/full-members/
+- https://interussplatform.org/members/
+- https://uasdoc.faa.gov/api/v1/publicDOCRev?pageIndex=0&itemsPerPage=2000
+- https://www.faa.gov/uas/getting_started/laanc
