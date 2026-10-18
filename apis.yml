@@ -45,6 +45,15 @@ tags:
   - Fleet Management
   - Public Safety
   - Robotics
+  - UAV
+tags_raw:
+  - Autonomous Systems
+  - Defense
+  - Drones
+  - Enterprise
+  - Fleet Management
+  - Public Safety
+  - Robotics
   - Unmanned Aerial Vehicles
 url: >-
   https://raw.githubusercontent.com/api-evangelist/skydio/refs/heads/main/apis.yml
